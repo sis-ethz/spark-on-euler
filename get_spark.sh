@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir -p spark_home
 cd spark_home
 
