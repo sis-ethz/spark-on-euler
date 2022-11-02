@@ -9,6 +9,7 @@
 #SBATCH --error="logs/%j.err"
 #SBATCH --time=00:05:00
 #SBATCH --exclusive
+#SBATCH --job-name=spark-cluster
 
 # This section will be run when started by sbatch
 if [ "$1" != 'srunning' ]; then
