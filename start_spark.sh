@@ -17,9 +17,10 @@ if [ "$1" != 'srunning' ]; then
     this=$0
 
     module load jdk
+    module load python/3.7.4
 
-    export sparkLogs=logs/spark-%j
-    export sparkTmp=tmp/spark-%j
+    export sparkLogs=logs/spark-master
+    export sparkTmp=tmp/spark-master
     mkdir -p "$sparkLogs" "$sparkTmp"
 
     export SPARK_ROOT=$(pwd)/spark_home/spark-3.2.2-bin-hadoop3.2
