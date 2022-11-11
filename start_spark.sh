@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --output="logs/%j.out"
 #SBATCH --error="logs/%j.err"
-#SBATCH --time=00:20:00
+#SBATCH --time=24:00:00
 #SBATCH --exclusive
 #SBATCH --job-name=spark-cluster
 
