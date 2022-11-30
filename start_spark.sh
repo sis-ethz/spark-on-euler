@@ -9,7 +9,7 @@
 #SBATCH --output="logs/%j_%n.out"
 #SBATCH --error="logs/%j_%n.err"
 #SBATCH --time=00:40:00
-#SBATCH --job-name=spark-cluster
+#SBATCH --job-name=s-cluster
 
 # This section will be run when started by sbatch
 if [ "$1" != 'srunning' ]; then
