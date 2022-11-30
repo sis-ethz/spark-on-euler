@@ -22,7 +22,7 @@ if [ "$1" != 'srunning' ]; then
     export sparkTmp=tmp/spark-master
     mkdir -p "$sparkLogs" "$sparkTmp"
 
-    export SPARK_ROOT=$(pwd)/spark_home/spark-3.2.2-bin-hadoop3.2
+    export SPARK_ROOT=$(pwd)/spark_home/spark-3.2.3-bin-hadoop3.2
     export SPARK_HOME=$SPARK_ROOT
     export SPARK_WORKER_DIR=$sparkLogs
     export SPARK_LOCAL_DIRS=$sparkLogs
