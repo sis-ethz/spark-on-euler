@@ -2,14 +2,13 @@
 
 # Inspired by: https://github.com/vtsynergy/SparkLeBLAST/blob/be16f5d5733a11d5a126dfac33230e2fcd338275/start_spark_slurm.sbatch 
 
-#SBATCH --nodes=3
-#SBATCH --ntasks=3
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=24
 #SBATCH --output="logs/%j.out"
-#SBATCH --error="logs/%j.err"
-#SBATCH --time=24:00:00
-#SBATCH --exclusive
+#SBATCH --error="logs/%j.err"y
+#SBATCH --time=2:00:00e
 #SBATCH --job-name=spark-cluster
 
 # This section will be run when started by sbatch
