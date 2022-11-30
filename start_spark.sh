@@ -7,8 +7,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=24
 #SBATCH --output="logs/%j.out"
-#SBATCH --error="logs/%j.err"y
-#SBATCH --time=2:00:00e
+#SBATCH --error="logs/%j.err"
+#SBATCH --time=2:00:00
 #SBATCH --job-name=spark-cluster
 
 # This section will be run when started by sbatch
