@@ -24,13 +24,16 @@ if [ "$1" != 'srunning' ]; then
 
     export SPARK_ROOT=$(pwd)/spark_home/spark-3.2.3-bin-hadoop3.2
     export SPARK_HOME=$SPARK_ROOT
-    export SPARK_WORKER_DIR=$sparkLogs
-    export SPARK_LOCAL_DIRS=$sparkLogs
+    export SPARK_WORKER_DIR=${sparkLogs}_${HOSTNAME}
+    export SPARK_LOCAL_DIRS=${sparkLogs}_${HOSTNAME}
     export SPARK_MASTER_PORT=7077
     export SPARK_MASTER_WEBUI_PORT=8080
     export SPARK_WORKER_CORES=$SLURM_CPUS_PER_TASK
-    export SPARK_DAEMON_MEMORY=$(( $SLURM_MEM_PER_CPU * $SLURM_CPUS_PER_TASK / 2 ))m
-    export SPARK_MEM=$SPARK_DAEMON_MEMORY
+#     export SPARK_DAEMON_MEMORY=$(( $SLURM_MEM_PER_CPU * $SLURM_CPUS_PER_TASK / 2 ))m
+    export SPARK_DAEMON_MEMORY=2g
+#     export SPARK_MEM=$SPARK_DAEMON_MEMORY
+    
+    export SPARK_WORKER_MEM=30g
     
     # Assuming we are running on Euler because dirctories are shared
     script="$(pwd)/start_spark.sh"
