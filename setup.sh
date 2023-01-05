@@ -1,4 +1,4 @@
 #!/bin/bash
 
 mkdir -p logs
-mkdir -p temp
+mkdir -p tmp
